@@ -4,6 +4,11 @@
  <body>
  <img src="https://www.oci-workshop.com/oci.png"><br>
  Welcome to the OCI Webserver!<br>
+ <br>
+ <button onclick="window.location.href='/speedtest';">
+      Speedtest
+ </button>
+ <br><br>
 
 <?php
 ini_set('default_socket_timeout', 2);
