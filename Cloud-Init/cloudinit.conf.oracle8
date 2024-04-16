@@ -1,22 +1,21 @@
 #cloud-config
-#Demo web server install on Ubuntu 22.04
+package_update: false
+package_upgrade: false
 
-apt_update: true
-apt_upgrade: false
 packages:
-  - apache2
-  - libapache2-mod-php
-  - php-curl
+  - httpd
+  - php
   - git
 
 runcmd:
-  - sudo iptables -F
+  - [ systemctl, enable, --now, httpd.service ]
+  - [ firewall-cmd, --permanent, --add-service=http ]
+  - [ firewall-cmd, --permanent, --add-service=https ]
+  - [ firewall-cmd, --reload ]
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/index.php -O /var/www/html/index.php
   - sudo rm /var/www/html/index.html
   - sudo git clone https://github.com/librespeed/speedtest.git /var/www/html/speedtest
   - sudo cp /var/www/html/speedtest/example-singleServer-pretty.html /var/www/html/speedtest/index.html
 
-
-
-
+output: { all: '| tee -a /var/log/cloud-init-output.log' }
 
