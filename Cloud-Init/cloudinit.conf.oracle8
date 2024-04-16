@@ -13,7 +13,7 @@ runcmd:
   - sudo firewall-cmd --reload
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/index.php -O /var/www/html/index.php
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.php -O /var/www/html/ping.php
-  - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.html -O /var/www/html/html.html
+  - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.html -O /var/www/html/ping.html
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.js -O /var/www/html/js.php
   - sudo rm /var/www/html/index.html
   - sudo git clone https://github.com/librespeed/speedtest.git /var/www/html/speedtest
