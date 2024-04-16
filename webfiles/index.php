@@ -8,6 +8,10 @@
  <button onclick="window.location.href='/speedtest';">
       Speedtest
  </button>
+ <button onclick="window.location.href='ping.html';">
+      Ping
+ </button>
+
  <br><br>
 
 <?php
