@@ -14,7 +14,7 @@ runcmd:
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/index.php -O /var/www/html/index.php
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.php -O /var/www/html/ping.php
   - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.html -O /var/www/html/ping.html
-  - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.js -O /var/www/html/js.php
+  - sudo wget https://raw.githubusercontent.com/AnykeyNL/OCI-DemoWebServer/main/webfiles/ping.js -O /var/www/html/ping.js
   - sudo rm /var/www/html/index.html
   - sudo git clone https://github.com/librespeed/speedtest.git /var/www/html/speedtest
   - sudo cp /var/www/html/speedtest/example-singleServer-pretty.html /var/www/html/speedtest/index.html
